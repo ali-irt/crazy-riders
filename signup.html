@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crazy Riders Sign Up</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 600px; /* Adjust width as needed */
+      margin: 50px auto;
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 20px;
+      background-color: gray;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      width: 150px; /* Adjust logo size */
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .checkbox-container {
+      margin-top: 5px;
+      font-weight: lighter;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #00A7E1; 
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    a {
+      color: #00A7E1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src=images\logo.jpeg width="30" height="50" alt="Crazy Riders Logo" >
+      <h1>Join the Crazy Riders Community</h1>
+    </header>
+
+    <main>
+      <form action="#">
+        <fieldset>
+          <legend>Sign Up Details</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+          <div class="checkbox-container">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the Crazy Riders Terms & Conditions</label>
+            <a href="index.html" id="close-popup">Close</a>
+          </div>
+          <script>
+            const closePopup = document.getElementById('close-popup');
+        
+          
+            closePopup.addEventListener('click', () => {
+              signupPopup.style.display = 'none';
+            });
+          </script>
+          <button type="submit">Sign Up</button>
+        </fieldset>
+      </form>
+
+      <p>Already have an account? <a href="#">Sign In</a></p>
+    </main>
+
+    <footer>
+      <p> Crazy Riders</p>
+    </footer>
+  </div>
+</body>
+</html>

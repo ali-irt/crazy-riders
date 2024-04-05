@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+h1{
+    color: #6c9ba7;
+    font-family: 'Monstay', cursive; 
+    text-shadow: 2px 2px 4px #000000;
+}
+.crazy{
+    font-size: 56px;
+}
+body{
+    background: rgba(0, 0, 0, 0.6) url('./images/homebg.jpg') center center fixed;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container h1{
+    color: #a8abd3;
+    font-weight: 700;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: 'Segoe Script', cursive; /* Change font to a fancy font */
+
+}
+
+.navbar ul li{
+    display: inline-flex;
+    list-style: none;
+    margin: 0 20px;
+    align-items: end;
+    float: right;
+
+}
+.content-wrapper
+{
+    min-height: 100vh;
+}
+.navbar ul li a{
+    padding: 9px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.navbar ul li a:hover{
+    background-color: rgba(211, 211, 211, 0.116);
+
+}
+.content{
+    position: absolute;
+    color: #fff;
+    margin-top: 11%;
+    margin-left: 15%;
+}
+
+.content h1{
+    font-size: 50px;
+}
+
+.para {
+    text-align: center;
+    padding: 50px;
+}
+
+.para h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.para p {
+    font-size: 28px;
+    line-height: 1.6;
+    color:whitesmoke;
+    
+}
+
+.para p::first-letter {
+    font-size: 48px;
+    color: #390dd8;
+    font-weight: bold;
+    float: left;
+    padding-right: 6px;
+    padding-top: 4px;
+}
+.ad {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    float: right;  }
+  
+  /* Additional styling for the parody ad */
+  .parody-ad {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  .ad p {
+    color:whitesmoke;
+  }
+  
+  .ad img {
+    width: 200px;
+    height: 350px;
+    border-radius: 5px;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #70696952;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer a {
+    color: rgb(130, 157, 189) ;/* LinkedIn's brand color for links; adjust as needed */
+    text-decoration: none; /* Removes underline from links */
+}
+.footer a:hover,
+.footer a:focus {
+    text-decoration: underline;
+    color: rgb(82, 117, 160) ;/* LinkedIn's brand color for links; adjust as needed */
+}
+/* Target the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Set scrollbar width */
+  }
+  
+  /* Style the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Set track background color */
+  }
+  
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set thumb color */
+    border-radius: 6px; /* Add rounded corners */
+  }
+  

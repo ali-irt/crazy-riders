@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+h1{
+    color: #6c9ba7;
+    font-family: 'Monstay', cursive; 
+    text-shadow: 2px 2px 4px #000000;
+}
+body{
+    background: rgba(0, 0, 0, 0.6) url('./images/contact.jpg') center center fixed;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+   background-size: cover;
+
+}
+
+.container{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container h1{
+    color: #0a17c2;
+    font-weight: 700;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: 'Segoe Script', cursive; /* Change font to a fancy font */
+
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navbar ul li a{
+    padding: 9px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.navbar ul li a:hover{
+    background-color: lightgray;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #e7dbdb;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .part {
+      width: 80%;
+      margin: auto;
+
+      padding: 20px;
+    }
+    .spare-part {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 40px;
+      height: 200px;
+
+    }
+    .spare-part img {
+      max-width: 300px;
+      max-height: 200px;
+      display: block;
+      margin: auto;
+      float: right;
+    }
+    .spare-part h2 {
+      margin-top: 10px;
+    }
+    .spare-part p {
+      margin-top: 5px;
+    }
+  
