@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spare Parts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="signup.css">
+
     <link rel="stylesheet" href="spare_parts.css">
   </head>
 <body>
-    <div class="container">
-      <a href="index.html">
-        <h1> Crazy Riders</h1>
-    </a>        <div class="navbar">
-            <ul>
-              <li><a href="signup.html"><img src="images/signup.png" alt="Google icon" width="20" height="20"> Signup</a></li>
 
-              <li><a href="spare_parts.html">Spare parts</a></li>
-
-                <li><a href="arrivals.html">New Arrivals</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
+   <a href="index.html"> <div class="container1">
+      <h1 class="logo"> Crazy Riders</h1> </a>
+      
+       <nav class="navbar">
+     
+          <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          </label>
+          <ul class="links">
+            <li><a href="spare_parts.html">Spare parts</a></li>
+            <li><a href="arrivals.html">New Arrivals</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <button class="login-btn">LOG IN</button>
+        </nav>
     </div>
 
   
@@ -72,12 +79,74 @@
       <p>Price: $30.00</p>
     </div>
   </div>
-  <footer class="footer">
+  <div class="blur-bg-overlay"></div>
+<div class="form-popup">
+    <span class="close-btn material-symbols-rounded">close</span>
+    <div class="form-box login">
+        <div class="form-details">
+            <h2>Welcome Back</h2>
+            <p>Please log in using your personal information to stay connected with us.</p>
+        </div>
+        <div class="form-content">
+            <h2>LOGIN</h2>
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <a href="#" class="forgot-pass-link">Forgot password?</a>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="bottom-link">
+                Don't have an account?
+                <a href="#" id="signup-link">Signup</a>
+            </div>
+        </div>
+    </div>
+    <div class="form-box signup">
+        <div class="form-details">
+            <h2>Create Account</h2>
+            <p>To become a part of our community, please sign up using your personal information.</p>
+        </div>
+        <div class="form-content">
+            <h2>SIGNUP</h2>
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" required>
+                    <label>Enter your email</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" required>
+                    <label>Create password</label>
+                </div>
+                <div class="policy-text">
+                    <input type="checkbox" id="policy">
+                    <label for="policy">
+                        I agree the
+                        <a href="#" class="option">Terms & Conditions</a>
+                    </label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="bottom-link">
+                Already have an account? 
+                <a href="#" id="login-link">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
     © 2024 Crazy Riders. All rights reserved.
 
     <p> developed by AIK technologies</p>
     <a href="https://www.linkedin.com/in/ali-khalid-39234122a/" target="_blank" >Follow us on LinkedIn</a>
-</footer>
-</body>
+  </footer>
+  <script src="signup.js">
 
+  </script>
+</body>
 </html>

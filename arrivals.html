@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
     <link rel="stylesheet" href="arrivals.css">
+    <link rel="stylesheet" href="signup.css">
 
        <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -13,25 +15,31 @@
     <title> New Arrivals</title>
 </head>
 <body>
-    <div class="container">
-      <a href="index.html">
-        <h1> Crazy Riders</h1>
-    </a>        <div class="navbar">
-            <ul>
-              <li><a href="signup.html"><img src="images/signup.png" alt="Google icon" width="20" height="20"> Signup</a></li>
-
-              <li><a href="spare_parts.html">Spare parts</a></li>
-
-                <li><a href="arrivals.html">New Arrivals</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
+  <a href="index.html"> <div class="container">
+    <h1 class="logo"> Crazy Riders</h1> </a>
+    
+    
+      <nav class="navbar">
+  
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+        <ul class="links">
+      
+          <li><a href="spare_parts.html">Spare parts</a></li>
+          <li><a href="arrivals.html">New Arrivals</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="login-btn">LOG IN</button>
+  
+      </nav>
     </div>
 
   
 
-    <h1 style="text-align: center;">New Arrivals</h1>
+    <h1 class="new">New Arrivals</h1>
 </header>
 
   
@@ -40,150 +48,77 @@
   </head>
   <body>
    
-<div class="container">
-<div id="demo" class="carousel slide my-3" data-ride="carousel">
-    <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1" ></li>
-      <li data-target="#demo" data-slide-to="2" ></li>
-    </ul>
-
-    <!--Slideshow starts here -->
-    <div class="container carousel-inner no-padding">
-
-      <div class="carousel-item active">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>
             </div>
-          </div>
-       </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To become a part of our community, please sign up using your personal information.</p>
             </div>
-          </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            I agree the
+                            <a href="#" class="option">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
         </div>
-
-       
-      </div>
-      
-      
-      <div class="carousel-item">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem; ">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-       
-      </div>
-            <div class="carousel-item">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-       </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='' class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-
-       </div>
     </div>
-      </div>
-    </div>
-
-</div>
-
-    <!-- left and right controls for the slide -->
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
- <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  </body>
-</html>
-<footer class="footer">
-  © 2024 Crazy Riders. All rights reserved.
-
-  <p> developed by AIK technologies</p>
-  <a href="https://www.linkedin.com/in/ali-khalid-39234122a/" target="_blank" >Follow us on LinkedIn</a>
-</footer>
-</body>
+    <footer class="footer">
+        © 2024 Crazy Riders. All rights reserved.
+    
+        <p> developed by AIK technologies</p>
+        <a href="https://www.linkedin.com/in/ali-khalid-39234122a/" target="_blank" >Follow us on LinkedIn</a>
+      </footer>
+      <script src="signup.js">
+    
+      </script>
+    
+    </body>
+    </html>
+    
+ 
