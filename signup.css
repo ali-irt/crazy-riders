@@ -13,22 +13,7 @@
     margin: 0 auto;
     justify-content: space-between;
 }
-/*
-.navbar .logo {
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-.navbar .logo img {
-    width: 40px;
-    border-radius: 50%;
-}
-.navbar .logo h2 {
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.7rem;
-}*/
+
 .navbar .links {
     display: flex;
     gap: 35px;
@@ -229,47 +214,7 @@ form button:hover {
     height: 14px;
     margin-right: 7px;
 }
-/*@media (max-width: 950px) {
-    .navbar :is(.hamburger-btn, .close-btn) {
-        display: block;
-    }
-    .navbar {
-        padding: 15px 0;
-    }
-    .navbar .logo img {
-        display: none;
-    }
-    .navbar .logo h2 {
-        font-size: 1.4rem;
-    }
-    .navbar .links {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        background: #331515;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        display: block;
-        transition: all 0.3s ease;
-    }
-    .navbar .links.show-menu {
-        left: 0;
-    }
-    .navbar .links a {
-        display: inline-flex;
-        margin: 20px 0;
-        font-size: 1.2rem;
-        color: #000;
-    }
-    .navbar .links a:hover {
-        color: #00BCD4;
-    }
-    .navbar .login-btn {
-        font-size: 0.9rem;
-        padding: 7px 10px;
-    }
-}*/
+
 @media (max-width: 760px) {
     .form-popup {
         width: 95%;

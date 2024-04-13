@@ -21,6 +21,19 @@ body{
 
 }
 
+
+
+.logo {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
 .container{
     margin: auto;
     padding: 20px;
@@ -91,17 +104,23 @@ nav ul li a{
     nav .menu-btn i{
       display: block;
     }
-   
+   .footer{
+    display: none;
+   }
     #click:checked ~ .menu-btn i:before{
       content: "\f00d";
     }
-   
+    body{
+      background-image: url(images/arrival.jpg);
+       background-size: cover;
+     
+    }
     nav ul{
       position: fixed;
       top: 80px;
       left: -100%;
       background: #0c0b0b;
-      height: 100vh;
+      height: 90vh;
       width: 100%;
       text-align: center;
       display: block;
@@ -134,12 +153,7 @@ nav ul li a{
 
 
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; 
-      padding: 0;
-      color: #e7dbdb;
-    }
+
     header {
       background-color: #333;
       color: #fff;
@@ -174,26 +188,101 @@ nav ul li a{
      padding-left: 0;
      padding-right: 0;
      }
-     .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 50px;
-        background-color: #70696952;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .footer a {
-        color: rgb(130, 157, 189) ;/* LinkedIn's brand color for links; adjust as needed */
-        text-decoration: none; /* Removes underline from links */
-    }
-    .footer a:hover,
-    .footer a:focus {
-        text-decoration: underline;
-        color: rgb(82, 117, 160) ;/* LinkedIn's brand color for links; adjust as needed */
-    }
+
+
+
+
+
+
+
+     footer{
+      background: #e5e5cc    ;
+      padding-top: 50px;
+      margin-top: 2.7in;
+  }
+  .container2{
+      width: 1140px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+  }
+  .footer-content{
+      width: 33.3%;
+  }
+  h3{
+      font-size: 28px;
+      margin-bottom: 15px;
+      text-align: center;
+  }
+  .footer-content p{
+      width:190px;
+      margin: auto;
+      padding: 7px;
+  }
+  .footer-content ul{
+      text-align: center;
+  }
+  .list{
+      padding: 0;
+  }
+  .list li{
+      width: auto;
+      text-align: center;
+      list-style-type:none;
+      padding: 7px;
+      position: relative;
+      font-size: medium;
+      font-style: oblique;
+  }
+  .list li::before{
+      content: '';
+      position: absolute;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      top: 100%;
+      width: 0;
+      height: 2px;
+      background: #f18930;
+      transition-duration: .5s;
+  }
+  .list li:hover::before{
+      width: 70px;
+  }
+  .social-icons{
+      text-align: center;
+      padding: 0;
+  }
+  .social-icons li{
+      display: inline-block;
+      text-align: center;
+      padding: 5px;
+  }
+  .social-icons i{
+      color: #3C4151;
+      font-size: 25px;
+  }
+  a{
+      text-decoration: none;
+  }
+  a:hover{
+      color: #f18930;
+  }
+  .social-icons i:hover{
+      color: #f18930;
+  }
+  .bottom-bar{
+      background: #666633;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 50px;
+  }
+  .bottom-bar p{
+      color: wheat;
+      margin: 0;
+      font-size: 16px;
+      padding: 7px;
+  }
+  
     /* Target the scrollbar */
     ::-webkit-scrollbar {
         width: 10px; /* Set scrollbar width */
@@ -210,3 +299,125 @@ nav ul li a{
         border-radius: 6px; /* Add rounded corners */
       }
       
+
+
+      
+.container1 {
+  max-width: 1200px;
+  width: 95%;
+
+margin-left: 2.5in;
+}
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+.slider-wrapper .slide-button#prev-slide {
+  left: 25px;
+  display: none;
+}
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper .image-list .image-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+.container1 .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+.image-list .image-item:hover{
+  width: 400px;
+  height: 400px;
+  transition: transform 0.3s ease-in-out;  /* Add transition effect */
+}

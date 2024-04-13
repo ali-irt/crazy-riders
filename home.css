@@ -88,6 +88,14 @@ nav ul li a{
     nav .menu-btn i{
       display: block;
     }
+    body{
+      background-image: url(images/arrival.jpg);
+       background-size: cover;
+     
+    }
+    .footer{
+      display: none;
+    }
     #click:checked ~ .menu-btn i:before{
       content: "\f00d";
     }
@@ -96,7 +104,7 @@ nav ul li a{
       top: 80px;
       left: -100%;
       background: #524f4f;
-      height: 100vh;
+      height: 90vh;
       width: 100%;
       text-align: center;
       display: block;
@@ -107,7 +115,7 @@ nav ul li a{
     }
     nav ul li{
       width: 100%;
-      margin: 40px 0;
+      margin: 20px 0;
     }
     nav ul li a{
       width: 100%;
@@ -128,7 +136,16 @@ nav ul li a{
   }
 
 
-
+  .logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logo img {
+    width: 40px;
+    border-radius: 50%;
+}
 
 .content{
     position: absolute;
@@ -178,41 +195,95 @@ nav ul li a{
     text-align: center;
     float: right;  }
   
-  /* Additional styling for the parody ad */
-  .parody-ad {
-    background-color: #f0f0f0;
-    border-radius: 5px;
-  }
-  .ad p {
-    color:whitesmoke;
-  }
-  
-  .ad img {
-    width: 200px;
-    height: 350px;
-    border-radius: 5px;
-  }
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: #70696952;
-    color: white;
+    footer{
+    background: #e5e5cc    ;
+    padding-top: 50px;
+}
+.container2{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content{
+    width: 33.3%;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width:190px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type:none;
+    padding: 7px;
+    position: relative;
+    font-size: medium;
+    font-style: oblique;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: #3C4151;
+    font-size: 25px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #f18930;
+}
+.social-icons i:hover{
+    color: #f18930;
+}
+.bottom-bar{
+    background: #666633;
     text-align: center;
     padding: 10px 0;
+    margin-top: 50px;
 }
-.footer a {
-    color: rgb(130, 157, 189) ;/* LinkedIn's brand color for links; adjust as needed */
-    text-decoration: none; /* Removes underline from links */
+.bottom-bar p{
+    color: wheat;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
 }
-.footer a:hover,
-.footer a:focus {
-    text-decoration: underline;
-    color: rgb(82, 117, 160) ;/* LinkedIn's brand color for links; adjust as needed */
-}
-/* Target the scrollbar */
+
+/* footers
+Target the scrollbar */
 ::-webkit-scrollbar {
     width: 10px; /* Set scrollbar width */
   }

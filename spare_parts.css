@@ -8,6 +8,7 @@ h1{
     color: #6c9ba7;
     font-family: 'Monstay', cursive; 
     text-shadow: 2px 2px 4px #000000;
+    text-decoration: none;
 }
 body{
     background: rgba(177, 147, 147, 0.6) url('./images/contact.jpg') center center fixed;
@@ -16,6 +17,23 @@ body{
    background-size: cover;
 
 }
+
+
+
+.logo {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+
+
+
 
 .container1{
   margin: auto;
@@ -86,6 +104,9 @@ input[type="checkbox"]{
 @media (max-width: 920px) {
   nav .menu-btn i{
     display: block;
+  }
+  footer{
+    display:none;
   }
   #click:checked ~ .menu-btn i:before{
     content: "\f00d";
@@ -168,26 +189,93 @@ input[type="checkbox"]{
     .spare-part p {
       margin-top: 5px;
     }
-    .footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      background-color: #776e6e;
-      color: white;
+    footer{
+      background: #043d44    ;
+      padding-top: 50px;
+  }
+  .container2{
+      width: 1140px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+  }
+  .footer-content{
+      width: 33.3%;
+  }
+  h3{
+      font-size: 28px;
+      margin-bottom: 15px;
+      text-align: center;
+  }
+  .footer-content p{
+      width:190px;
+      margin: auto;
+      padding: 7px;
+  }
+  .footer-content ul{
+      text-align: center;
+  }
+  .list{
+      padding: 0;
+  }
+  .list li{
+      width: auto;
+      text-align: center;
+      list-style-type:none;
+      padding: 7px;
+      position: relative;
+      font-size: medium;
+      font-style: oblique;
+  }
+  .list li::before{
+      content: '';
+      position: absolute;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      top: 100%;
+      width: 0;
+      height: 2px;
+      background: #f18930;
+      transition-duration: .5s;
+  }
+  .list li:hover::before{
+      width: 70px;
+  }
+  .social-icons{
+      text-align: center;
+      padding: 0;
+  }
+  .social-icons li{
+      display: inline-block;
+      text-align: center;
+      padding: 5px;
+  }
+  .social-icons i{
+      color: #3C4151;
+      font-size: 25px;
+  }
+  a{
+      text-decoration: none;
+  }
+  a:hover{
+      color: #f18930;
+  }
+  .social-icons i:hover{
+      color: #f18930;
+  }
+  .bottom-bar{
+      background: #666633;
       text-align: center;
       padding: 10px 0;
+      margin-top: 50px;
   }
-  .footer a {
-      color: rgb(130, 157, 189) ;/* LinkedIn's brand color for links; adjust as needed */
-      text-decoration: none; /* Removes underline from links */
+  .bottom-bar p{
+      color: wheat;
+      margin: 0;
+      font-size: 16px;
+      padding: 7px;
   }
-  .footer a:hover,
-  .footer a:focus {
-      text-decoration: underline;
-      color: rgb(82, 117, 160) ;/* LinkedIn's brand color for links; adjust as needed */
-  }
+  
   /* Target the scrollbar */
   ::-webkit-scrollbar {
       width: 10px; /* Set scrollbar width */
