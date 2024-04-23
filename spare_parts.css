@@ -105,9 +105,7 @@ input[type="checkbox"]{
   nav .menu-btn i{
     display: block;
   }
-  footer{
-    display:none;
-  }
+ 
   #click:checked ~ .menu-btn i:before{
     content: "\f00d";
   }
@@ -275,103 +273,64 @@ input[type="checkbox"]{
       font-size: 16px;
       padding: 7px;
   }
-  @media(max-width:720px)
-  {
-/* Base Styles (assumed for 720px layout) */
-footer{
-  background: #043d44    ;
-  padding-top: 50px;
-}
-.container2{
-  width: auto;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-.footer-content p {
-  width: 190px;
-  margin: auto;
-  padding: 7px;
-}
+/* Mobile Styles (applies to screens 720px or smaller) */
+@media (max-width: 720px) {
+  footer {
+    padding-top: 30px; /* Reduced padding for smaller screens */
+  }
 
-.footer-content ul {
-  text-align: center;
-}
+  .container2 {
+    width: 100%; /* Take full width on mobile */
+    flex-direction: column; /* Stack vertically */
+  }
 
-.list {
-  padding: 0;
-}
+  .footer-content {
+    width: 100%; /* Adapt to full width */
+    text-align: center;
+  }
 
-.list li {
-  width: auto;
-  text-align: center;
-  list-style-type: none;
-  padding: 7px;
-  position: relative;
-  font-size: medium;
-  font-style: oblique;
-}
+  h3 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
 
-.list li::before {
-  content: '';
-  position: absolute;
-  transform: translate(-50%,-50%);
-  left: 50%;
-  top: 100%;
-  width: 0;
-  height: 2px;
-  background: #f18930;
-  transition-duration: .5s;
-}
+  .footer-content p {
+    width: 100%; /* Full width for text */
+    padding: 10px; /* More padding for better readability */
+  }
 
-.list li:hover::before {
-  width: 70px;
-}
-
-.social-icons {
-  text-align: center;
-  padding: 0;
-}
-
-.social-icons li {
-  display: inline-block;
-  text-align: center;
-  padding: 5px;
-}
-
-.social-icons i {
-  color: #3C4151;
-  font-size: 25px;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: #f18930;
-}
-
-.social-icons i:hover {
-  color: #f18930;
-}
-
-.bottom-bar {
-  background: #666633;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 50px;
-}
-
-.bottom-bar p {
-  color: wheat;
-  margin: 0;
-  font-size: 16px;
-  padding: 7px;
-}
+  .list {
+    padding: 0;
+    margin: 0; /* Reset margins to avoid spacing issues */
   
+  
+  text-decoration: none;}
 
+  .list li {
+    padding: 10px; /* Adjusted padding for smaller screens */
+    font-size: small; /* Smaller font size */
+    text-decoration: none;
+  }
 
+  .list li::before {
+    width: 50px; /* Shorter hover effect */
+  }
+
+  .social-icons {
+    padding: 10px; /* Add padding for separation */
+  }
+
+  .social-icons i {
+    font-size: 22px; /* Smaller icons on mobile */
+  }
+
+  .bottom-bar {
+    padding: 10px 0; /* Reduced padding */
+    margin-top: 30px; /* Reduced margin */
+  }
+
+  .bottom-bar p {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
 }
   
   /* Target the scrollbar */

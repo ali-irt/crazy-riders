@@ -93,9 +93,7 @@ nav ul li a{
        background-size: cover;
      
     }
-    .footer{
-      display: none;
-    }
+    
     #click:checked ~ .menu-btn i:before{
       content: "\f00d";
     }
@@ -282,24 +280,81 @@ a:hover{
     padding: 7px;
 }
 
-/* footers
-Target the scrollbar */
-::-webkit-scrollbar {
-    width: 10px; /* Set scrollbar width */
-  }
-  
-  /* Style the scrollbar track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Set track background color */
-  }
-  
-  /* Style the scrollbar thumb */
-  ::-webkit-scrollbar-thumb {
-    background-color: #888; /* Set thumb color */
-    border-radius: 6px; /* Add rounded corners */
+/* Mobile Styles (applies to screens 720px or smaller) */
+@media (max-width: 720px) {
+  footer {
+    padding-top: 30px; /* Reduced padding for smaller screens */
   }
 
+  .container2 {
+    width: 100%; /* Take full width on mobile */
+    flex-direction: column; /* Stack vertically */
+  }
 
+  .footer-content {
+    width: 100%; /* Adapt to full width */
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .footer-content p {
+    width: 100%; /* Full width for text */
+    padding: 10px; /* More padding for better readability */
+  }
+
+  .list {
+    padding: 0;
+    margin: 0; /* Reset margins to avoid spacing issues */
+  
+  
+  text-decoration: none;}
+
+  .list li {
+    padding: 10px; /* Adjusted padding for smaller screens */
+    font-size: small; /* Smaller font size */
+    text-decoration: none;
+  }
+
+  .list li::before {
+    width: 50px; /* Shorter hover effect */
+  }
+
+  .social-icons {
+    padding: 10px; /* Add padding for separation */
+  }
+
+  .social-icons i {
+    font-size: 22px; /* Smaller icons on mobile */
+  }
+
+  .bottom-bar {
+    padding: 10px 0; /* Reduced padding */
+    margin-top: 30px; /* Reduced margin */
+  }
+
+  .bottom-bar p {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
+  
+  /* Target the scrollbar */
+  ::-webkit-scrollbar {
+      width: 10px; /* Set scrollbar width */
+    }
+    
+    /* Style the scrollbar track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Set track background color */
+    }
+    
+    /* Style the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+      background-color: #888; /* Set thumb color */
+      border-radius: 6px; /* Add rounded corners */
+    }
   .login-btn {
     border: none;
     outline: none;
