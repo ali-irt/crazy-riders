@@ -1,179 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="arrivals.css"> 
 
-    <link rel="stylesheet" href="arrivals.css">
-    <link rel="stylesheet" href="signup.css">
+  <title>New Arrivals</title>
+  <style>
+    /* Styles for iframe container */
+    #loginForm {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999; /* Make sure it's on top of other content */
+    }
 
-       <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    .iframe-container {
+      position: relative;
+      width: 30%;
+      height: 50%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
-    <title> New Arrivals</title>
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10000; /* Ensure it is above the iframe */
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
-    <a href="index.html" class="logo"> 
+    <a href="index.html" class="logo">
       <img src="images/logo.png" alt="logo">
-  
-        <h1  style="text-decoration: none;"> Crazy Riders</h1> </a>    
-    
-      <nav class="navbar">
-  
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
+      <h1 style="text-decoration: none;">Crazy Riders</h1>
+    </a>
+
+    <nav class="navbar">
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
         <i class="fas fa-bars"></i>
-        </label>
-        <ul class="links">
-      
-          <li><a href="spare_parts.html">Spare parts</a></li>
-          <li><a href="arrivals.html">New Arrivals</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+      </label>
+      <ul class="links">
+        <li><a href="spare_parts.html">Spare parts</a></li>
+        <li><a href="arrivals.html">New Arrivals</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button class="login-btn" onclick="openLoginForm()">LOG IN</button>
+    </nav>
+  </div>
+
+  <h1 class="new">New Arrivals</h1>
+
+  <div class="container1">
+    <div class="slider-wrapper">
+      <button id="prev-slide" class="slide-button material-symbols-rounded">
+        &#x2190;
+      </button>
+      <ul class="image-list">
+        <img class="image-item" src="images/ad.jpg" alt="img-1">
+        <img class="image-item" src="images/ad1.jpg" alt="img-2">
         </ul>
-        <button class="login-btn">LOG IN</button>
-  
-      </nav>
+      <button id="next-slide" class="slide-button material-symbols-rounded">
+        &#x2192;
+      </button>
     </div>
-
-  
-
-    <h1 class="new">New Arrivals</h1>
-</header>
-
-  
-    
-  
-  </head>
-  <body>
-    <div class="container1">
-        <div class="slider-wrapper">
-          <button id="prev-slide" class="slide-button material-symbols-rounded">
-            <-
-          </button>
-          <ul class="image-list">
-            <img class="image-item" src="images/ad.jpg" alt="img-1" />
-            <img class="image-item" src="images/ad1.jpg" alt="img-2" />
-            <img class="image-item" src="images/arrival.jpg" alt="img-3" />
-            <img class="image-item" src="images/contact.jpg" alt="img-4" />
-            <img class="image-item" src="images/homebg.jpg" alt="img-5" />
-            <img class="image-item" src="images/logo.jpeg" alt="img-6" />
-            <img class="image-item" src="images/signup.png" alt="img-7" />
-            <img class="image-item" src="services/service.jpg" alt="img-8" />
-            <img class="image-item" src="signup/bg.jpg" alt="img-9" />
-            <img class="image-item" src="signup/images.jpeg" alt="img-10" />
-          </ul>
-          <button id="next-slide" class="slide-button material-symbols-rounded">
-            ->
-          </button>
-        </div>
-        <div class="slider-scrollbar">
-          <div class="scrollbar-track">
-            <div class="scrollbar-thumb"></div>
-          </div>
-        </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
       </div>
-    <div class="blur-bg-overlay"></div>
-    <div class="form-popup">
-        <span class="close-btn material-symbols-rounded">close</span>
-        <div class="form-box login">
-            <div class="form-details">
-                <h2>Welcome Back</h2>
-                <p>Please log in using your personal information to stay connected with us.</p>
-            </div>
-            <div class="form-content">
-                <h2>LOGIN</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <a href="#" class="forgot-pass-link">Forgot password?</a>
-                    <button type="submit">Log In</button>
-                </form>
-                <div class="bottom-link">
-                    Don't have an account?
-                    <a href="#" id="signup-link">Signup</a>
-                </div>
-            </div>
-        </div>
-        <div class="form-box signup">
-            <div class="form-details">
-                <h2>Create Account</h2>
-                <p>To become a part of our community, please sign up using your personal information.</p>
-            </div>
-            <div class="form-content">
-                <h2>SIGNUP</h2>
-                <form action="#">
-                    <div class="input-field">
-                        <input type="text" required>
-                        <label>Enter your email</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Create password</label>
-                    </div>
-                    <div class="policy-text">
-                        <input type="checkbox" id="policy">
-                        <label for="policy">
-                            I agree the
-                            <a href="#" class="option">Terms & Conditions</a>
-                        </label>
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <div class="bottom-link">
-                    Already have an account? 
-                    <a href="#" id="login-link">Login</a>
-                </div>
-            </div>
-        </div>
     </div>
-    <footer>
-      <div class="container2">
-          <div class="footer-content">
-              <h3>Contact Us</h3>
-              <p>Email:ali233khalid@gmail.com</p>
-              <p>Phone:+923140000000</p>
-            
-          </div>
-          <div class="footer-content">
-              <h3>Quick Links</h3>
-               <ul class="list">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="contact.html">About</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="arrivals.html">Products</a></li>
-                  <li><a href="services.html">Services</a></li>
-               </ul>
-          </div>
-          <div class="footer-content">
-              <h3>Follow Us</h3>
-              <ul class="social-icons">
-               <li><a href=""><i class="fab fa-facebook"></i></a></li>
-               <li><a href="https://twitter.com/ali_irt1"><i class="fab fa-twitter"></i></a></li>
-               <li><a href="https://www.instagram.com/ali.irtza1/"><i class="fab fa-instagram"></i></a></li>
-               <li><a href="https://www.linkedin.com/in/ali-khalid-39234122a/"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-              </div>
+  
+  </div>
+  <div class="blur-bg-overlay" id="loginForm" style="display:none;">
+    <div class="iframe-container">
+      <iframe src="login.html"></iframe>
+      <button class="close-btn" onclick="closeLoginForm()">Close</button>
+    </div>
+  </div>
+  <footer>
+    <div class="container2">
+      <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p>Email:ali233khalid@gmail.com</p>
+        <p>Phone:+923140000000</p>
       </div>
-      <div class="bottom-bar">
-          <p>&copy; 2024 Crazy Riders . All rights reserved</p>
+      <div class="footer-content">
+        <h3>Quick Links</h3>
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="arrivals.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
       </div>
-  </footer>
-      <script src="signup.js"></script>
-      <script src="arrival.js">
+      <div class="footer-content">
 
-      </script>
-    
-    </body>
-    </html>
-    
- 
+      <h3>Follow Us</h3>
+            <ul class="social-icons">
+             <li><a href=""><i class="fab fa-facebook"></i></a></li>
+             <li><a href="https://twitter.com/ali_irt1"><i class="fab fa-twitter"></i></a></li>
+             <li><a href="https://www.instagram.com/ali.irtza1/"><i class="fab fa-instagram"></i></a></li>
+             <li><a href="https://www.linkedin.com/in/ali-khalid-39234122a/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            </div>
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2024 Crazy Riders . All rights reserved</p>
+    </div>
+</footer>
+<script>
+  function openLoginForm() {
+    document.getElementById('loginForm').style.display = 'flex';
+  }
+
+  function closeLoginForm() {
+    document.getElementById('loginForm').style.display = 'none';
+  }
+</script>
+</body>
+</html>

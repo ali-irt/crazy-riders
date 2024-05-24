@@ -284,6 +284,9 @@ a:hover{
 }
 /* Mobile Styles (applies to screens 720px or smaller) */
 @media (max-width: 720px) {
+   
+
+
   footer {
     padding-top: 30px; /* Reduced padding for smaller screens */
   }

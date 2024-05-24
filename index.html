@@ -5,140 +5,126 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crazy Riders</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <link rel="stylesheet" href="signup.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="home.css">
+  <style>
+    /* Styles for iframe container */
+    #loginForm {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999; /* Make sure it's on top of other content */
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 30%;
+      height: 50%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10000; /* Ensure it is above the iframe */
+    }
+  </style>
 </head>
 <body>
- 
-
   <div class="container">
-    <a href="index.html" class="logo"> 
-        <img src="images/logo.png" alt="logo">
-    
-        <h1 > Crazy Riders</h1> </a>
-        <nav class="navbar">
-
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="logo">
+      <h1>Crazy Riders</h1>
+    </a>
+    <nav class="navbar">
       <input type="checkbox" id="click">
       <label for="click" class="menu-btn">
-      <i class="fas fa-bars"></i>
+        <i class="fas fa-bars"></i>
       </label>
       <ul class="links">
-    
         <li><a href="spare_parts.html">Spare parts</a></li>
         <li><a href="arrivals.html">New Arrivals</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
-      <button class="login-btn">LOG IN</button>
-
+      <button class="login-btn" onclick="openLoginForm()">LOG IN</button>
     </nav>
   </div>
   <div class="content-wrapper">
-  <div class="para">
-    <h1>Welcome to <span style="color: #0a17c2;">Crazy Riders</span></h1>
-    <p>Your ultimate destination for all things sport bike-related! Prepare to immerse yourself in the high-octane world where speed, precision, and agility reign supreme. Whether you're a seasoned rider seeking the latest gear and performance upgrades or a newcomer eager to learn the ropes, Crazy Riders is your go-to hub for everything sport bike.</p>
-    <p>Here, we celebrate the adrenaline-fueled excitement of hitting the open road, carving through curves, and pushing the limits of performance. From in-depth reviews of the hottest sport bikes on the market to expert tips on honing your riding skills, our passion for the sport shines through in every aspect of our content.</p>
-    <p>Join our vibrant community of fellow enthusiasts, where you can connect, share stories, and swap advice with like-minded riders from around the globe. Whether you're chasing lap times on the track or embarking on epic cross-country adventures, Crazy Riders is your trusted companion on the journey.</p>
-    <p>Get ready to rev your engines and unleash the thrill of the ride with Crazy Riders, your premier source for all things sport bike. Let the adventure begin!</p>
+    <div class="para">
+      <h1>Welcome to <span style="color: #0a17c2;">Crazy Riders</span></h1>
+      <p>Your ultimate destination for all things sport bike-related! Prepare to immerse yourself in the high-octane world where speed, precision, and agility reign supreme. Whether you're a seasoned rider seeking the latest gear and performance upgrades or a newcomer eager to learn the ropes, Crazy Riders is your go-to hub for everything sport bike.</p>
+      <p>Here, we celebrate the adrenaline-fueled excitement of hitting the open road, carving through curves, and pushing the limits of performance. From in-depth reviews of the hottest sport bikes on the market to expert tips on honing your riding skills, our passion for the sport shines through in every aspect of our content.</p>
+      <p>Join our vibrant community of fellow enthusiasts, where you can connect, share stories, and swap advice with like-minded riders from around the globe. Whether you're chasing lap times on the track or embarking on epic cross-country adventures, Crazy Riders is your trusted companion on the journey.</p>
+      <p>Get ready to rev your engines and unleash the thrill of the ride with Crazy Riders, your premier source for all things sport bike. Let the adventure begin!</p>
+    </div>
   </div>
-  
-</div>
-<div class="blur-bg-overlay"></div>
-<div class="form-popup">
-    <span class="close-btn material-symbols-rounded">close</span>
-    <div class="form-box login">
-        <div class="form-details">
-            <h2>Welcome Back</h2>
-            <p>Please log in using your personal information to stay connected with us.</p>
-        </div>
-        <div class="form-content">
-            <h2>LOGIN</h2>
-            <form action="#">
-                <div class="input-field">
-                    <input type="text" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-field">
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <a href="#" class="forgot-pass-link">Forgot password?</a>
-                <button type="submit">Log In</button>
-            </form>
-            <div class="bottom-link">
-                Don't have an account?
-                <a href="#" id="signup-link">Signup</a>
-            </div>
-        </div>
+  <div class="blur-bg-overlay" id="loginForm" style="display:none;">
+    <div class="iframe-container">
+      <iframe src="login.html"></iframe>
+      <button class="close-btn" onclick="closeLoginForm()">Close</button>
     </div>
-    <div class="form-box signup">
-        <div class="form-details">
-            <h2>Create Account</h2>
-            <p>To become a part of our community, please sign up using your personal information.</p>
-        </div>
-        <div class="form-content">
-            <h2>SIGNUP</h2>
-            <form action="#">
-                <div class="input-field">
-                    <input type="text" required>
-                    <label>Enter your email</label>
-                </div>
-                <div class="input-field">
-                    <input type="password" required>
-                    <label>Create password</label>
-                </div>
-                <div class="policy-text">
-                    <input type="checkbox" id="policy">
-                    <label for="policy">
-                        I agree the
-                        <a href="#" class="option">Terms & Conditions</a>
-                    </label>
-                </div>
-                <button type="submit">Sign Up</button>
-            </form>
-            <div class="bottom-link">
-                Already have an account? 
-                <a href="#" id="login-link">Login</a>
-            </div>
-        </div>
-    </div>
-</div>
-<footer>
+  </div>
+  <footer>
     <div class="container2">
-        <div class="footer-content">
-            <h3>Contact Us</h3>
-            <p>Email:ali233khalid@gmail.com</p>
-            <p>Phone:+923140000000</p>
-          
-        </div>
-        <div class="footer-content">
-            <h3>Quick Links</h3>
-             <ul class="list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="arrivals.html">Products</a></li>
-                <li><a href="services.html">Services</a></li>
-             </ul>
-        </div>
-        <div class="footer-content">
-            <h3>Follow Us</h3>
-            <ul class="social-icons">
-             <li><a href=""><i class="fab fa-facebook"></i></a></li>
-             <li><a href="https://twitter.com/ali_irt1"><i class="fab fa-twitter"></i></a></li>
-             <li><a href="https://www.instagram.com/ali.irtza1/"><i class="fab fa-instagram"></i></a></li>
-             <li><a href="https://www.linkedin.com/in/ali-khalid-39234122a/"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-            </div>
+      <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p>Email: ali233khalid@gmail.com</p>
+        <p>Phone: +923140000000</p>
+      </div>
+      <div class="footer-content">
+        <h3>Quick Links</h3>
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="arrivals.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-content">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href=""><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/ali_irt1"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/ali.irtza1/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/ali-khalid-39234122a/"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
     </div>
     <div class="bottom-bar">
-        <p>&copy; 2024 Crazy Riders . All rights reserved</p>
+      <p>&copy; 2024 Crazy Riders. All rights reserved</p>
     </div>
-</footer>
-  <script src="signup.js">
+  </footer>
+  <script>
+    function openLoginForm() {
+      document.getElementById('loginForm').style.display = 'flex';
+    }
 
+    function closeLoginForm() {
+      document.getElementById('loginForm').style.display = 'none';
+    }
   </script>
 </body>
 </html>

@@ -34,22 +34,6 @@ body{
   border-radius: 50%;
 }
 
-.container{
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.container h1{
-    color: #a8abd3;
-    font-weight: 700;
-    font-size: 40px;
-    cursor: pointer;
-    font-family: 'Segoe Script', cursive; /* Change font to a fancy font */
-
-}
 
 
 nav{
@@ -98,12 +82,36 @@ nav ul li a{
   @media (max-width: 1000px){
     nav{
       padding: 0 40px 0 50px;
+            nav .menu-btn i {
+        display: block;
+      }
+    }
+    
+    /* When menu is active (checkbox checked) on small screens */
+    #click:checked ~ ul {
+      left: 0; /* Show the menu */
+    }
+    
+    /* Style menu items for mobile view */
+    #click:checked ~ ul li {
+      width: 100%; /* Make menu items full width */
+      margin: 20px 0; /* Add spacing between items */
     }
   }
   @media (max-width: 920px) {
     nav .menu-btn i{
       display: block;
     }
+    /* Existing styles */
+
+/* Media query for screens smaller than 720px */
+@media screen and (max-width: 720px) {
+ 
+  .menu-btn {
+    display: block;  /* Show menu button */
+  }
+}
+
    .footer{
     display: none;
    }
@@ -424,19 +432,19 @@ margin-left: 2.5in;
 
 /* Mobile Styles (applies to screens 720px or smaller) */
 @media (max-width: 720px) {
+
   footer {
     padding-top: 30px; /* Reduced padding for smaller screens */
   }
 
   .container2 {
-    width: 100%; /* Take full width on mobile */
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column; /* Stack footer content vertically */
+  }
+  .footer-content {
+    width: 100%; /* Make footer content full width */
+    text-align: center; /* Center content */
   }
 
-  .footer-content {
-    width: 100%; /* Adapt to full width */
-    text-align: center;
-  }
 
   h3 {
     font-size: 24px; /* Smaller font size for mobile */
@@ -497,3 +505,4 @@ margin-left: 2.5in;
       background-color: #888; /* Set thumb color */
       border-radius: 6px; /* Add rounded corners */
     }
+    
