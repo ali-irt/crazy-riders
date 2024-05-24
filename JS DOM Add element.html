@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+
+<div id="div1">
+    <p id="p1">This is 1st paragraph.</p>
+    <p id="p2">This is 2nd paragraph.</p>
+</div>
+<div id="div2">
+    <p id="p3">This is 3rd paragraph.</p>
+    <p id="p4">This is 4th paragraph.</p>
+</div>
+<script>
+const p_node = document.createElement("p");
+const p_text = document.createTextNode("This is new Text.");
+p_node.appendChild(p_text);
+const element1 = document.getElementById("div1");
+//element1.appendChild(p_node);
+element1.appendChild(p_node.cloneNode(true)); // Cloning and appending to div1
+const element2 = document.getElementById("div2");
+element2.appendChild(p_node);
+
+</script>
+</body>
+</html>

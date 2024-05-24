@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript HTML DOM</h2>
+<p>Finding HTML Elements by Tag Name.</p>
+<p>Finding HTML Elements by ID.</p>
+<p>Finding HTML Elements by CSS.</p>
+<p id="demo"></p>
+<script>
+const element = document.getElementsByTagName("p");
+let index = 1 ;
+document.getElementById("demo").innerHTML = 'The text in paragraph (at index) is: ' + element[index].innerHTML;
+</script>
+</body>
+</html>

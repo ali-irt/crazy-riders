@@ -1,0 +1,96 @@
+const mysql = require("mysql2");
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+
+const app = express();
+const encoder = bodyParser.urlencoded({ extended: true });
+
+// Create a connection to the database
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "1111",
+    database: "bike"
+});
+
+// Connect to the database
+connection.connect(function (error) {
+    if (error) {
+        console.error("Error connecting to the database:", error);
+        return;
+    }
+    console.log("Connected to the database successfully!");
+});
+
+// Middleware to parse URL-encoded bodies
+app.use(encoder);
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, )));
+
+// Handle root URL by redirecting to login page
+app.get("/", function (req, res) {
+    res.redirect("/login");
+});
+
+// Serve the login page
+app.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname,  'login.html'));
+});
+
+// Handle login form submission
+app.post("/login", function (req, res) {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    console.log("Login form submission received:", { email, password });
+
+    connection.query("SELECT * FROM users WHERE email = ? AND password = ?", [email, password], function (error, results, fields) {
+        if (error) {
+            console.error("Query error:", error);
+            res.status(500).send("Internal Server Error");
+            return;
+        }
+        if (results.length > 0) {
+            console.log("Login successful, redirecting to /home");
+            res.redirect("/home");
+        } else {
+            console.log("Login failed, redirecting to /login");
+            res.redirect("/login");
+        }
+    });
+});
+
+// Serve the signup page
+app.get("/signup", function (req, res) {
+    res.sendFile(path.join(__dirname,  'signup.html'));
+});
+
+// Handle signup form submission
+app.post("/signup", function (req, res) {
+    const { email, username, password } = req.body;
+
+    console.log("Signup form submission received:", { email, username, password });
+
+    connection.query("INSERT INTO users (email, username, password) VALUES (?, ?, ?)", [email, username, password], function (error, results, fields) {
+        if (error) {
+            console.error("Signup error:", error);
+            res.status(500).send("Internal Server Error");
+            return;
+        }
+        console.log("User signed up successfully!");
+        // Redirect to login page after signup
+        res.redirect("/login");
+    });
+});
+
+// Serve the home page after login
+app.get("/home", function (req, res) {
+    res.sendFile(path.join(__dirname,  'index.html'));
+});
+
+// Set the app to listen on port 4000
+app.listen(4000, function () {
+    console.log("Server is running on port 4000");
+});
