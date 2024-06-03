@@ -5,6 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crazy Riders</title>
+  <script>
+    window.addEventListener('message', function(event) {
+        if (event.data === 'closePopup') {
+            window.location.reload();
+        }
+    });
+</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="home.css">
   <style>
@@ -19,7 +26,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 9999; /* Make sure it's on top of other content */
+      z-index: 9999; 
     }
 
     .iframe-container {

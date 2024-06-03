@@ -30,7 +30,7 @@
 
         input[type="email"],
         input[type="password"] {
-            width: 100%;  
+            width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -75,5 +75,13 @@
         <button type="submit">Login</button>
         <p>Don't have an account? <a href="signup.html">Sign up</a></p>
     </form>
+    <script>
+        // Listen for login success message from the server
+        window.addEventListener('message', function(event) {
+            if (event.data === 'loginSuccess') {
+                window.close();
+            }
+        });
+    </script>
 </body>
 </html>

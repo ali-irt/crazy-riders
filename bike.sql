@@ -1,1 +1,2 @@
-SELECT * FROM bike.users;
+use bike;
+select * from users
