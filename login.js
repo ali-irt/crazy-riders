@@ -9,7 +9,7 @@ const encoder = bodyParser.urlencoded({ extended: true });
 
 // Create a connection to the database
 const connection = mysql.createConnection({
-    host: "www.crazyriders.vercel.com",
+    host: "https://crazyriders.vercel.app/",
     user: "root",
     password: "1111",
     database: "bike"
