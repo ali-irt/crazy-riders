@@ -61,12 +61,12 @@ app.post("/login", function (req, res) {
                     res.send("<script>window.opener.postMessage('loginSuccess', '*'); window.close();</script>");
                 } else {
                     console.log("Login failed, redirecting to /login");
-                    res.redirect("/login");
+                    res.redirect("/login.html");
                 }
             });
         } else {
             console.log("Login failed, redirecting to /login");
-            res.redirect("/login");
+            res.redirect("/login.html");
         }
     });
 });
@@ -96,7 +96,7 @@ app.post("/signup", function (req, res) {
             }
             console.log("User signed up successfully!");
             // Redirect to login page after signup
-            res.redirect("/login");
+            res.redirect("/login.html");
         });
     });
 });
